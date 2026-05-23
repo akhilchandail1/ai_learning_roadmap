@@ -1,0 +1,1062 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Learning Roadmap — 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Personal Roadmap · 2026</div>
+  <h1>6-Month Plan to<br><span>AI Engineer</span> at 30+ LPA</h1>
+  <div class="header-meta">
+    <div class="meta-chip"><span class="dot" style="background:#818cf8"></span> <strong>Jun – Nov 2026</strong> · 26 weeks</div>
+    <div class="meta-chip"><span class="dot" style="background:#34d399"></span> Target: <strong>Product Company · SDE-2 AI</strong></div>
+    <div class="meta-chip"><span class="dot" style="background:#fbbf24"></span> Current: <strong>X LPA → Goal: 30+ LPA</strong></div>
+    <div class="meta-chip"><span class="dot" style="background:#f87171"></span> Apply: <strong>Jan 2027</strong></div>
+  </div>
+</header>
+
+<!-- Timeline -->
+<div class="timeline-strip">
+  <div class="timeline-title">// 6-month arc</div>
+  <div class="timeline-bar">
+    <div class="tl-segment" style="background:#818cf8">JUNE</div>
+    <div class="tl-segment" style="background:#a78bfa">JULY</div>
+    <div class="tl-segment" style="background:#22d3ee">AUGUST</div>
+    <div class="tl-segment" style="background:#34d399">SEPTEMBER</div>
+    <div class="tl-segment" style="background:#fbbf24">OCTOBER</div>
+    <div class="tl-segment" style="background:#f87171">NOVEMBER</div>
+  </div>
+  <div class="milestones">
+    <div class="ms">Python + DSA<br>Foundation</div>
+    <div class="ms">LLMs + Prompt<br>Engineering</div>
+    <div class="ms">RAG Systems<br>+ Ship App</div>
+    <div class="ms">Agents +<br>LLMOps</div>
+    <div class="ms">System Design<br>+ Mock Interviews</div>
+    <div class="ms">Capstone +<br>Job Prep</div>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="stat-num" style="color:#818cf8">20</div>
+    <div class="stat-label">Weeks of structured learning</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num" style="color:#22d3ee">150+</div>
+    <div class="stat-label">LeetCode problems</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num" style="color:#34d399">5+</div>
+    <div class="stat-label">Shipped projects on GitHub</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num" style="color:#fbbf24">20</div>
+    <div class="stat-label">LinkedIn posts published</div>
+  </div>
+</div>
+
+<!-- Progress Tracker -->
+<div class="progress-tracker" id="progress-tracker">
+  <div class="progress-header">
+    <span class="progress-title">// progress tracker</span>
+    <div class="progress-actions">
+      <span class="sync-status" id="sync-status"></span>
+      <button class="action-btn primary" id="btn-save" onclick="saveToGitHub()">↑ Save</button>
+      <button class="action-btn" id="btn-refresh" onclick="loadFromGitHub()">↓ Refresh</button>
+      <button class="action-btn" onclick="openSettings()">⚙ Config</button>
+      <button class="action-btn danger" onclick="resetProgress()">Reset</button>
+    </div>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="progress-bar-fill"></div>
+  </div>
+  <div class="progress-stats">
+    <span id="progress-text">0 / 20 weeks complete</span>
+    <span id="progress-pct">0%</span>
+  </div>
+  <div class="phase-progress-row" id="phase-progress-row"></div>
+</div>
+
+<!-- Legend -->
+<div class="legend">
+  <a href="#phase-1" class="legend-item"><span class="legend-dot" style="background:#818cf8"></span>June · Python + DSA</a>
+  <a href="#phase-2" class="legend-item"><span class="legend-dot" style="background:#a78bfa"></span>July · LLMs</a>
+  <a href="#phase-3" class="legend-item"><span class="legend-dot" style="background:#22d3ee"></span>August · RAG</a>
+  <a href="#phase-4" class="legend-item"><span class="legend-dot" style="background:#34d399"></span>September · Agents</a>
+  <a href="#phase-5" class="legend-item"><span class="legend-dot" style="background:#fbbf24"></span>October · System Design</a>
+  <a href="#phase-6" class="legend-item"><span class="legend-dot" style="background:#f87171"></span>November · Capstone</a>
+</div>
+
+<div class="phases">
+
+<!-- ── PHASE 1 ── -->
+<div class="phase-block" id="phase-1">
+  <div class="phase-header">
+    <span class="phase-accent" style="background:#818cf8"></span>
+    <span class="phase-num">PHASE 01 / 06</span>
+    <span class="phase-title">Python & DSA Foundations</span>
+    <span class="phase-month">June 2025</span>
+  </div>
+  <div class="weeks-grid">
+
+    <!-- Week 1 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 01</span>
+          <span class="week-dates">Jun 2 – Jun 8</span>
+          <span class="week-deadline">⏎ Deadline Jun 8</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#818cf8"></div>
+          <span class="week-theme">Python for AI Engineers</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Python internals — decorators, generators, context managers</li>
+            <li>Async/await & concurrency (asyncio, httpx)</li>
+            <li>Type hints, Pydantic v2 — data validation</li>
+            <li>FastAPI — routing, middleware, dependency injection</li>
+            <li>Python packaging — pyproject.toml, uv</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Typed async FastAPI service with Pydantic models, JWT auth middleware, and a /health + /chat endpoint. Deploy locally with Docker Compose.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> Tech With Tim — FastAPI Full Course (4hr)</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> docs.pydantic.dev + FastAPI official docs (fastapi.tiangolo.com)</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 1: "Why I'm relearning Python after 4 years as a software engineer" — personal hook story. Aim for 300+ words, no bullet lists.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Create public repo: <code>ai-learning-journey</code> — add a pinned README with your 6-month roadmap. This is your anchor repo.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 2 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 02</span>
+          <span class="week-dates">Jun 9 – Jun 15</span>
+          <span class="week-deadline">⏎ Deadline Jun 15</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#818cf8"></div>
+          <span class="week-theme">DSA — Arrays, Strings & Hash Maps</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Two pointer technique — sorted arrays, in-place problems</li>
+            <li>Sliding window — fixed & variable size</li>
+            <li>Hash maps / sets — frequency counting, anagrams</li>
+            <li>String manipulation — reversal, palindromes</li>
+            <li>Prefix sums — subarray problems</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Solve 15 LeetCode Mediums from Arrays & Hashing category on NeetCode roadmap. Write clean Python solutions with time/space complexity comments.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> NeetCode — Arrays & Hashing full playlist</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> neetcode.io/roadmap — follow the roadmap order, not random</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 2: Carousel — "The AI engineer interview nobody tells you about: DSA is still there". 6-slide carousel with one pattern per slide.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Add <code>/dsa/arrays/</code> folder. Each file = one problem. Filename format: <code>001_two_sum.py</code>. Push daily.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 3 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 03</span>
+          <span class="week-dates">Jun 16 – Jun 22</span>
+          <span class="week-deadline">⏎ Deadline Jun 22</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#818cf8"></div>
+          <span class="week-theme">DSA — Trees, Graphs & Recursion</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Binary trees — inorder/preorder/postorder, LCA</li>
+            <li>BFS — level order traversal, shortest path</li>
+            <li>DFS — path sum, island problems</li>
+            <li>Graph representations — adjacency list, matrix</li>
+            <li>Recursion patterns — memoization intro</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Solve 15 LeetCode Mediums (Trees + Graphs). Visualize 3 problems with ASCII diagrams in your solutions — this habit helps in interviews.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> NeetCode — Trees + Graphs playlists (separate)</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> Cracking the Coding Interview — Chapter 4 (Trees & Graphs)</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 3: "I solved 30 LeetCode problems in 2 weeks. Here's what actually changed in how I think as an engineer." — reflection post.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Add <code>/dsa/trees/</code> and <code>/dsa/graphs/</code>. Add a PROGRESS.md tracking your solve count per category.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 4 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 04</span>
+          <span class="week-dates">Jun 23 – Jun 30</span>
+          <span class="week-deadline">⏎ Deadline Jun 30</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#818cf8"></div>
+          <span class="week-theme">DSA — DP, Heaps & Binary Search</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Dynamic programming — 1D DP, Fibonacci patterns, coin change</li>
+            <li>2D DP — grid problems, LCS, knapsack</li>
+            <li>Heap / Priority Queue — top-K problems, merge K lists</li>
+            <li>Binary search — search in rotated array, find boundary</li>
+            <li>Backtracking — subsets, permutations</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Solve 15 LeetCode Mediums (DP + Heap + Binary Search). End of month: timed drill — 3 random mediums in 90 minutes. Simulate real interview pressure.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> NeetCode — 1-D DP + 2-D DP playlists</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> leetcode.com/explore/learn (DP card + Heap card)</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 4: Thread — "Month 1 complete. 45 DSA problems. Here's what changed, what didn't, and what's next." End with your month 2 plan teaser.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Month-end cleanup: update PROGRESS.md, add README badges (problems solved count). Pin <code>ai-learning-journey</code> repo on your GitHub profile.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── PHASE 2 ── -->
+<div class="phase-block" id="phase-2">
+  <div class="phase-header">
+    <span class="phase-accent" style="background:#a78bfa"></span>
+    <span class="phase-num">PHASE 02 / 06</span>
+    <span class="phase-title">LLMs & Prompt Engineering</span>
+    <span class="phase-month">July 2025</span>
+  </div>
+  <div class="weeks-grid">
+
+    <!-- Week 5 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 05</span>
+          <span class="week-dates">Jul 1 – Jul 7</span>
+          <span class="week-deadline">⏎ Deadline Jul 7</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#a78bfa"></div>
+          <span class="week-theme">How LLMs Work — Deep Dive</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Transformer architecture — encoder, decoder, self-attention</li>
+            <li>Attention mechanism — Q, K, V matrices, multi-head attention</li>
+            <li>Tokenization — BPE, SentencePiece, tiktoken</li>
+            <li>Context windows, KV cache, positional encoding</li>
+            <li>Embeddings — semantic meaning in vector space</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Run GPT-2 locally with HuggingFace Transformers. Build a tokenizer visualizer (CLI tool showing tokens + token IDs for any input). Write a blog-quality README explaining what you learned.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> Andrej Karpathy — "Let's build GPT from scratch" (2hr, essential)</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> Jay Alammar's blog — "The Illustrated Transformer" (jalammar.github.io)</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 5: "I finally understand how LLMs work. Here's the simplest explanation I could write." — first principles post. This type performs very well on LinkedIn for technical audiences.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>New repo: <code>llm-internals</code>. Push tokenizer visualizer + GPT-2 experiment notebook. Add architecture diagram in README.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 6 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 06</span>
+          <span class="week-dates">Jul 8 – Jul 14</span>
+          <span class="week-deadline">⏎ Deadline Jul 14</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#a78bfa"></div>
+          <span class="week-theme">Prompt Engineering — Production Grade</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Chain of Thought (CoT) — zero-shot and few-shot variants</li>
+            <li>ReAct prompting — reasoning + acting pattern</li>
+            <li>Constitutional AI — self-critique loops</li>
+            <li>Prompt injection & defense strategies</li>
+            <li>System prompt design — persona, constraints, output format</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Build a structured prompt library: 20+ production-grade templates for real use cases — code review, PR description generator, bug diagnosis, SQL generator. Each template with system prompt + few-shot examples + expected output format.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> DeepLearning.AI — "ChatGPT Prompt Engineering for Developers" (free course)</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 6: "Prompt engineering is not just writing better sentences. Here's what production prompts for engineering tools actually look like." — share 3 real templates from your library.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>New public repo: <code>prompt-library</code>. Organized by use case. Add a README with rationale for each pattern. This repo gets GitHub stars — make it clean.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 7 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 07</span>
+          <span class="week-dates">Jul 15 – Jul 21</span>
+          <span class="week-deadline">⏎ Deadline Jul 21</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#a78bfa"></div>
+          <span class="week-theme">LLM APIs — Multi-Provider Mastery</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Anthropic, OpenAI, Gemini API patterns — auth, rate limits</li>
+            <li>Streaming responses — SSE, token-by-token rendering</li>
+            <li>Token cost calculation — pricing per 1M tokens</li>
+            <li>Error handling, retries, exponential backoff</li>
+            <li>Model routing logic — task type → model selection</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Build an LLM router: takes a task description → classifies it (coding/creative/analysis/summarization) → routes to the best model (Haiku for simple, Sonnet for complex, GPT-4o for code) → logs cost per call. FastAPI backend, streamed responses.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> AI Jason — "Building production apps with LLM APIs"</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> docs.anthropic.com/api-reference + openai.com/docs</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 7: "I built an LLM router that picks the right AI model for each task. Here's the architecture and what I learned about model selection." — include your cost comparison table.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Push LLM router to <code>llm-internals</code> or separate repo. Add cost logging dashboard as a simple CLI output. Clean README with architecture diagram.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 8 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 08</span>
+          <span class="week-dates">Jul 22 – Jul 31</span>
+          <span class="week-deadline">⏎ Deadline Jul 31</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#a78bfa"></div>
+          <span class="week-theme">Fine-Tuning & Embeddings</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>LoRA / QLoRA — low-rank adaptation, rank & alpha params</li>
+            <li>HuggingFace PEFT library — training loop</li>
+            <li>Dataset preparation for fine-tuning (instruction format)</li>
+            <li>Embedding models — sentence-transformers, OpenAI embeddings</li>
+            <li>Cosine similarity, dot product — semantic search intuition</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Fine-tune Llama 3.2 3B on a small domain dataset (e.g., Indian legal Q&A or coding instructions) using LoRA on Google Colab (free GPU). Evaluate before/after with a benchmark. Publish the notebook.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> Maxime Labonne — "Fine-tuning LLMs" full playlist</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> Sebastian Raschka's newsletter "Ahead of AI" (substack) + HuggingFace PEFT docs</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 8: Month 2 recap carousel — "From calling an API to understanding the model. What I built in July." 8-slide carousel with one concept per slide.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Push fine-tuning notebook to <code>llm-internals</code>. Include before/after output comparison in README. Add "Open in Colab" badge.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── PHASE 3 ── -->
+<div class="phase-block" id="phase-3">
+  <div class="phase-header">
+    <span class="phase-accent" style="background:#22d3ee"></span>
+    <span class="phase-num">PHASE 03 / 06</span>
+    <span class="phase-title">RAG Systems & Vector Databases</span>
+    <span class="phase-month">August 2025</span>
+  </div>
+  <div class="weeks-grid">
+
+    <!-- Week 9 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 09</span>
+          <span class="week-dates">Aug 1 – Aug 10</span>
+          <span class="week-deadline">⏎ Deadline Aug 10</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#22d3ee"></div>
+          <span class="week-theme">RAG Fundamentals</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Chunking strategies — fixed size, recursive, semantic</li>
+            <li>Embedding pipelines — document → chunks → vectors</li>
+            <li>Vector databases — pgvector (Postgres), Pinecone, Qdrant</li>
+            <li>Retrieval patterns — dense (semantic), sparse (BM25), hybrid</li>
+            <li>LangChain RAG chain — LCEL syntax</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Basic RAG pipeline: ingest a PDF corpus (e.g., 50 Indian court judgements) → chunk → embed with sentence-transformers → store in pgvector → query with LangChain. CLI interface.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> Greg Kamradt — "RAG From Scratch" full series (essential)</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> LangChain RAG docs + pgvector GitHub README</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 9: "Nobody talks about chunking in RAG. It's the most important decision you'll make. Here's what I learned." — very specific, technical, performs well.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>New repo: <code>rag-from-scratch</code>. Phase 1 folder: basic RAG. Add architecture diagram. README explains every design decision.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 10 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 10</span>
+          <span class="week-dates">Aug 11 – Aug 20</span>
+          <span class="week-deadline">⏎ Deadline Aug 20</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#22d3ee"></div>
+          <span class="week-theme">Advanced RAG — Production Patterns</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Query rewriting — HyDE, multi-query generation</li>
+            <li>Re-ranking — Cohere rerank, cross-encoders</li>
+            <li>Multi-vector retrieval — parent-child chunking</li>
+            <li>RAGAS evaluation framework — faithfulness, relevance, recall</li>
+            <li>Hallucination detection & grounding</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Upgrade your Week 9 RAG: add HyDE query rewriting + Cohere re-ranking + RAGAS evaluation. Run eval on 20 test questions. Show metrics improvement over baseline. This becomes a portfolio highlight.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> LlamaIndex — "Advanced RAG techniques" (YouTube channel)</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> RAGAS paper (arxiv) + LlamaIndex advanced RAG guide</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 10: "Basic RAG hallucinates 40% of the time in my tests. Here's how advanced RAG brings it down." — share your RAGAS metrics. Numbers = credibility.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Update <code>rag-from-scratch</code>: add /advanced folder. Include evaluation results as a markdown table in README. Add benchmark comparison chart.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 11 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 11</span>
+          <span class="week-dates">Aug 21 – Aug 31</span>
+          <span class="week-deadline">⏎ Deadline Aug 31</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#22d3ee"></div>
+          <span class="week-theme">RAG Capstone — Ship a Live App</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>FastAPI backend with streaming SSE responses</li>
+            <li>Simple frontend — chat UI (Next.js or plain HTML)</li>
+            <li>Deployment — Railway / Render / Fly.io</li>
+            <li>Environment config — secrets, .env, Docker</li>
+            <li>Basic auth — API key or simple JWT</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Ship a live RAG app with a public URL. Suggested: "J&K Government Policy AI" — upload govt documents, users can ask questions. Or "Tech Docs AI" for a popular open-source lib. Must be deployed and accessible.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> Coding Crash Courses — "Deploy FastAPI app on Railway in 10 mins"</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> railway.app docs + Fly.io deployment guide</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 11: "I shipped a production RAG app in 10 days. Here's the full architecture, what broke, and how I fixed it." Include live link. This is your first major signal post.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Polish <code>rag-from-scratch</code>: full README with architecture diagram (Excalidraw export), live demo link, tech stack badges, and a 2-min Loom walkthrough video.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── PHASE 4 ── -->
+<div class="phase-block" id="phase-4">
+  <div class="phase-header">
+    <span class="phase-accent" style="background:#34d399"></span>
+    <span class="phase-num">PHASE 04 / 06</span>
+    <span class="phase-title">Agentic AI & LLMOps</span>
+    <span class="phase-month">September 2025</span>
+  </div>
+  <div class="weeks-grid">
+
+    <!-- Week 12 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 12</span>
+          <span class="week-dates">Sep 1 – Sep 10</span>
+          <span class="week-deadline">⏎ Deadline Sep 10</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#34d399"></div>
+          <span class="week-theme">AI Agents from Scratch</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>ReAct agent loop — reason → act → observe cycle</li>
+            <li>Tool calling / function calling — Anthropic tool_use API</li>
+            <li>Memory types — in-context (short), external (long-term with Redis)</li>
+            <li>Agent state management — AgentState pattern</li>
+            <li>Agent failure modes — infinite loops, hallucinated tool calls</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Build a research agent from scratch — no LangChain, just Anthropic's tool_use API. Tools: web_search, read_url, write_file, summarize. Given a topic, it researches and writes a structured report. No frameworks — you understand every line.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> Anthropic — "Building Effective Agents" (YouTube, official talk)</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> anthropic.com/research/building-effective-agents (essential read)</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 12: "I built an AI research agent without LangChain. Here's why building from scratch teaches you what frameworks hide." — controversial framing = more engagement.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>New repo: <code>agents-from-scratch</code>. Research agent in /week1. Include AgentState diagram in README. Show a sample run output.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 13 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 13</span>
+          <span class="week-dates">Sep 11 – Sep 20</span>
+          <span class="week-deadline">⏎ Deadline Sep 20</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#34d399"></div>
+          <span class="week-theme">Agent Frameworks — LangGraph & CrewAI</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>LangGraph — state machines, nodes, edges, conditional routing</li>
+            <li>Human-in-the-loop patterns — interrupt, approve, continue</li>
+            <li>CrewAI — roles, tasks, crews, sequential vs hierarchical</li>
+            <li>Multi-agent communication — shared memory, message passing</li>
+            <li>Agent memory with Redis — persistent conversation state</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Multi-agent software team: PM Agent (takes feature request) → writes spec → Dev Agent (writes code) → QA Agent (reviews code + writes tests) → outputs a GitHub PR description. Built with LangGraph.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> LangChain — LangGraph tutorials (official YouTube channel)</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> langchain-ai.github.io/langgraph + docs.crewai.com</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 13: "I built a 3-agent software team: PM → Dev → QA. Here's the architecture, failure modes I hit, and what actually worked." Include LangGraph state diagram.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Add /langgraph-team to <code>agents-from-scratch</code>. Push the full multi-agent system. Include a flowchart of the agent state machine in README.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 14 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 14</span>
+          <span class="week-dates">Sep 21 – Sep 30</span>
+          <span class="week-deadline">⏎ Deadline Sep 30</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#34d399"></div>
+          <span class="week-theme">LLMOps — Production AI Observability</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>MLflow — experiment tracking, model registry, run comparison</li>
+            <li>Prompt versioning — version control for prompts</li>
+            <li>Latency & cost monitoring — token usage dashboards</li>
+            <li>Guardrails — NeMo Guardrails, Guardrails AI, input/output validation</li>
+            <li>A/B testing LLM outputs — evaluation harnesses</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Add full observability to your RAG app from August: MLflow tracking (latency, cost per query, retrieval scores), Guardrails AI for output validation, and a simple Streamlit cost dashboard. This demonstrates production thinking.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> MLflow official YouTube channel — "MLflow for LLMs" playlist</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> Chip Huyen — "AI Engineering" book (first 3 chapters at huyenchip.com/books)</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 14: Month 4 recap — "I went from building AI to shipping AI. Here's what LLMOps actually means for an engineer." Show your MLflow dashboard screenshot.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Add /ops folder to your RAG repo. Push MLflow setup + guardrails config + Streamlit dashboard. This is the detail that sets your portfolio apart.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── PHASE 5 ── -->
+<div class="phase-block" id="phase-5">
+  <div class="phase-header">
+    <span class="phase-accent" style="background:#fbbf24"></span>
+    <span class="phase-num">PHASE 05 / 06</span>
+    <span class="phase-title">System Design for AI Systems</span>
+    <span class="phase-month">October 2025</span>
+  </div>
+  <div class="weeks-grid">
+
+    <!-- Week 15 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 15</span>
+          <span class="week-dates">Oct 1 – Oct 10</span>
+          <span class="week-deadline">⏎ Deadline Oct 10</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#fbbf24"></div>
+          <span class="week-theme">System Design — Core Patterns</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Scalability — horizontal vs vertical, stateless services</li>
+            <li>Load balancing — L4 vs L7, consistent hashing</li>
+            <li>Caching — Redis patterns, cache invalidation, CDN</li>
+            <li>Database choices — SQL vs NoSQL, sharding, replication</li>
+            <li>API design — REST, GraphQL, gRPC tradeoffs</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Design two classic systems on paper with full diagrams: (1) URL shortener — focus on read-heavy optimization. (2) Twitter feed — focus on fanout strategies. Document both in Excalidraw or draw.io.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> ByteByteGo — System Design playlist (Alex Xu, essential)</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> "System Design Interview Vol 1" by Alex Xu (buy this book — ₹1,200, worth every rupee)</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 15: "System design lessons from 4 years of building production systems with Kubernetes, Redis, and GraphQL. What I wish I knew earlier." — use your Bentley experience here.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>New repo: <code>system-design-notes</code>. Add /classic-systems with your URL shortener + Twitter feed diagrams (export from Excalidraw as PNG). Clean, visual README.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 16 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 16</span>
+          <span class="week-dates">Oct 11 – Oct 20</span>
+          <span class="week-deadline">⏎ Deadline Oct 20</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#fbbf24"></div>
+          <span class="week-theme">AI System Design — Scale</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Designing RAG at scale — sharding vector DBs, async ingestion</li>
+            <li>LLM inference infrastructure — batching, KV cache, vLLM</li>
+            <li>Feature stores — Feast, offline vs online serving</li>
+            <li>ML pipelines — Airflow DAGs, data versioning with DVC</li>
+            <li>Cost optimization — caching LLM responses, semantic caching</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Write a full architecture doc (5-6 pages): "How I would design Perplexity AI from scratch." Cover: ingestion pipeline, vector DB sharding, LLM routing, caching layer, latency budget, cost model. This is your most impressive portfolio artifact.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> Fireship — "How Perplexity AI works" + ByteByteGo AI system design videos</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> Eugene Yan's blog — eugeneyan.com (Applied ML, Recsys, RAG at scale)</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 16: "How I'd design Perplexity AI from scratch — a full system design breakdown." Include your architecture diagram. Tag it #systemdesign #AIengineering. High-performing post type.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Add /ai-systems to <code>system-design-notes</code>. Push the Perplexity design doc as a detailed markdown file with embedded diagrams.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 17 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 17</span>
+          <span class="week-dates">Oct 21 – Oct 31</span>
+          <span class="week-deadline">⏎ Deadline Oct 31</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#fbbf24"></div>
+          <span class="week-theme">DSA Refresh + Mock Interviews</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Advanced graphs — Dijkstra's, Bellman-Ford, Union-Find</li>
+            <li>Trie — prefix search, autocomplete problems</li>
+            <li>Interval problems — merge intervals, meeting rooms</li>
+            <li>Monotonic stack / queue patterns</li>
+            <li>Full mock: 45-min coding + 45-min system design</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Do 2 full mock interviews: one coding (use Pramp or a friend), one system design (record yourself on Loom). Review the recording — spot where you hesitate. Solve 10 more LeetCode mediums from weak areas.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> NeetCode — Advanced Graphs + Tries playlists</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> "Designing Data-Intensive Applications" by Kleppmann — Ch 1–3 (critical for system design depth)</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 17: "I recorded my mock interviews. Here's what humbled me, what I fixed, and what I'd tell myself 6 months ago." Vulnerability + growth arc = high engagement.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Month-end portfolio audit: all projects must have live demo URL, architecture diagram, and tech stack in README. Unfinished repos = hidden or deleted. Only quality, public.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── PHASE 6 ── -->
+<div class="phase-block" id="phase-6">
+  <div class="phase-header">
+    <span class="phase-accent" style="background:#f87171"></span>
+    <span class="phase-num">PHASE 06 / 06</span>
+    <span class="phase-title">Capstone, Portfolio & Job Prep</span>
+    <span class="phase-month">November 2025</span>
+  </div>
+  <div class="weeks-grid">
+
+    <!-- Week 18 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 18</span>
+          <span class="week-dates">Nov 1 – Nov 10</span>
+          <span class="week-deadline">⏎ Deadline Nov 10</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#f87171"></div>
+          <span class="week-theme">Capstone — Full AI Product</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Combine: RAG + Agents + LLMOps in one product</li>
+            <li>Real problem, real users — not just a demo</li>
+            <li>FastAPI backend + Next.js or Streamlit frontend</li>
+            <li>Production deployment with monitoring</li>
+            <li>Write a full technical blog post about what you built</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Your flagship project. Ideas: (1) AI Code Review tool that analyzes PRs and gives senior-engineer-level feedback. (2) Indian Market Research Agent — given a startup idea, researches TAM, competitors, regulations. Must be live, must solve a real problem.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> Fireship — SaaS app deployment + Theo (t3.gg) on shipping fast</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> YC Startup Library — "How to build and ship fast" + Lenny's Newsletter on product thinking</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 18: "I spent 10 days building my most ambitious AI project. Here's the full breakdown — architecture, mistakes, and live demo." Share the URL. This is your anchor post.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Flagship repo: hero README with project screenshots, Loom demo video (2 min), architecture diagram, tech stack, and setup instructions. Pin this repo first on your profile.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 19 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 19</span>
+          <span class="week-dates">Nov 11 – Nov 20</span>
+          <span class="week-deadline">⏎ Deadline Nov 20</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#f87171"></div>
+          <span class="week-theme">Resume, LinkedIn & GitHub Overhaul</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>AI engineer resume format — impact-first bullets</li>
+            <li>LinkedIn SEO — headline, about, featured section keywords</li>
+            <li>GitHub profile README — skills grid, pinned repos</li>
+            <li>Quantifying Bentley work — "reduced X by Y%, shipped Z"</li>
+            <li>Referral strategy — how to get warm introductions</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">Rewrite your resume entirely — one page, impact bullets, AI engineer framing. Rebuild LinkedIn: new headline ("AI Engineer | Building RAG systems & LLM agents | Ex-Bentley Systems"), new About section (story arc), Featured section with your top 2 projects and best LI post.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> Jeff Su — "LinkedIn profile optimization" + "Resume that gets interviews"</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> levels.fyi/blog — engineering resume guide + teal.hq resume builder</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 19: "I rewrote my LinkedIn from scratch. Here's every change I made and why." Transparency post — shows growth mindset, drives profile views from recruiters.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Build your GitHub profile README: animated skill badges, contribution graph, pinned repos (top 4 projects only), and a one-line bio that matches your LI headline.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week 20 -->
+    <div class="week-card">
+      <div class="week-top">
+        <div class="week-label">
+          <span class="week-num">Week 20</span>
+          <span class="week-dates">Nov 21 – Nov 30</span>
+          <span class="week-deadline">⏎ Deadline Nov 30</span>
+        </div>
+        <div class="week-theme-bar">
+          <div class="theme-accent" style="background:#f87171"></div>
+          <span class="week-theme">Interview Prep & Company Research</span>
+          <button class="expand-btn" onclick="toggle(this)">EXPAND</button>
+        </div>
+      </div>
+      <div class="week-body">
+        <div class="detail-block">
+          <div class="detail-label">Topics</div>
+          <ul class="topic-list">
+            <li>Behavioral interviews — STAR method for AI project stories</li>
+            <li>AI engineer-specific questions — RAG tradeoffs, agent failure modes</li>
+            <li>Company-specific prep — Sarvam AI, Atlassian, Adobe, Razorpay</li>
+            <li>Salary negotiation — anchor high, never reveal first</li>
+            <li>Referral outreach — LinkedIn DM script that actually gets replies</li>
+          </ul>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Build This</div>
+          <div class="impl-box">10 mock behavioral interviews (record 3 of them). Research 10 target companies — document their AI teams, recent engineering blogs, and open roles. Draft 5 personalized referral outreach messages for people in your target companies.</div>
+          <div class="detail-label" style="margin-top:16px">Resources</div>
+          <div class="resource-link"><span class="resource-icon">▶</span><span><strong>YouTube:</strong> Exponent — Engineering behavioral interviews playlist</span></div>
+          <div class="resource-link" style="margin-top:8px"><span class="resource-icon">📖</span><span><strong>Read:</strong> levels.fyi (salary benchmarks) + Glassdoor interview reports for each target company</span></div>
+        </div>
+        <div class="detail-block" style="grid-column: 1 / -1;">
+          <div class="detail-label">LinkedIn + GitHub Actions</div>
+          <div class="social-row">
+            <div class="social-item li"><span class="social-tag li">LI</span><span>Post 20 (THE BIG ONE): "6 months. 20 posts. 5 projects shipped. 150+ DSA problems. Here's everything I built and learned preparing for my next chapter." Full recap. This post gets you inbound DMs.</span></div>
+            <div class="social-item gh"><span class="social-tag gh">GH</span><span>Final audit: exactly 4-5 pinned repos, all have live demos, all have architecture diagrams. Archive or make private anything incomplete. Your GitHub is now a portfolio, not a scratch pad.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- end .phases -->
+
+<div class="footer-note">
+  <strong>The rule above everything else:</strong> Consistency beats intensity. 2 focused hours every weekday + 4 hours on Saturday beats a 12-hour "study day" once a week. Every week has a deadline — treat it like a sprint, not a guideline. Your LinkedIn posts are not optional — they are the bridge between your work and the offers you'll receive. By November 30, you're not just applying to jobs. Recruiters and hiring managers will already know your name. <strong>Apply in January 2026. Target 30–45 LPA. You're already closer than you think.</strong>
+</div>
+
+<!-- Settings Modal -->
+<div class="modal-overlay" id="settings-modal">
+  <div class="modal">
+    <div class="modal-title">GitHub Sync Config</div>
+    <div class="modal-sub">
+      Your progress is saved as a JSON file in your GitHub repo.<br>
+      Needs a PAT with <strong>repo</strong> scope (or <strong>public_repo</strong> for public repos).
+      <br><a href="https://github.com/settings/tokens/new" target="_blank">Create a token →</a>
+    </div>
+    <div class="field">
+      <label>Personal Access Token</label>
+      <input id="cfg-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+    </div>
+    <div class="field">
+      <label>GitHub Username / Org</label>
+      <input id="cfg-owner" type="text" placeholder="akhilchandail9">
+    </div>
+    <div class="field">
+      <label>Repository Name</label>
+      <input id="cfg-repo" type="text" placeholder="ai-learning-journey">
+    </div>
+    <div class="field">
+      <label>File Path in Repo</label>
+      <input id="cfg-path" type="text" placeholder="progress.json">
+      <span class="modal-hint">e.g. progress.json or data/roadmap-progress.json</span>
+    </div>
+    <div class="field">
+      <label>Branch</label>
+      <input id="cfg-branch" type="text" placeholder="main">
+    </div>
+    <div class="modal-actions">
+      <button class="modal-btn secondary" onclick="closeSettings()">Cancel</button>
+      <button class="modal-btn confirm" onclick="saveSettings()">Save Config</button>
+    </div>
+  </div>
+</div>
+
+<script src="roadmap.js"></script>
+</body>
+</html>
