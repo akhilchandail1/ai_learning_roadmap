@@ -385,7 +385,7 @@ document.getElementById('settings-modal').addEventListener('click', e => {
 // ── GitHub Contents API helpers ───────────────────────────────────────────────
 function ghHeaders(token) {
   return {
-    'Authorization': `token ${token}`,
+    'Authorization': `Bearer ${token}`,
     'Accept':        'application/vnd.github+json',
     'Content-Type':  'application/json',
     'X-GitHub-Api-Version': '2022-11-28',
@@ -398,7 +398,7 @@ async function ghGetFile(cfg) {
   const res = await fetch(url, { headers: ghHeaders(cfg.token) });
   if (res.status === 404) return null;
   if (res.status === 401) throw new Error('Token invalid or expired — open ⚙ Config → Test Connection to diagnose.');
-  if (res.status === 403) throw new Error('Token lacks "repo" scope — regenerate your PAT with repo access.');
+  if (res.status === 403) throw new Error('Fine-grained token missing permission — go to GitHub → Settings → Fine-grained tokens → your token → Repository permissions → Contents → set to "Read and Write".');
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
     throw new Error(err.message || `HTTP ${res.status}`);
@@ -420,6 +420,8 @@ async function ghPutFile(cfg, jsonContent, sha) {
     headers: ghHeaders(cfg.token),
     body:    JSON.stringify(body),
   });
+  if (res.status === 401) throw new Error('Token invalid or expired.');
+  if (res.status === 403) throw new Error('Fine-grained token missing "Contents: Read and Write" permission.');
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
     throw new Error(err.message || `HTTP ${res.status}`);
