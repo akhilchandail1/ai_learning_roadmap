@@ -406,15 +406,15 @@ async function ghGetFile(cfg) {
   return res.json();
 }
 
-// PUT (create or update) a file — sha is required to update an existing file
+// PUT (create or update) a file — returns the raw Response so callers can inspect status
 async function ghPutFile(cfg, jsonContent, sha) {
   const url  = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${cfg.path}`;
   const body = {
     message: `Update roadmap progress — ${new Date().toLocaleString()}`,
-    content: btoa(unescape(encodeURIComponent(jsonContent))), // UTF-8 safe base64
+    content: btoa(unescape(encodeURIComponent(jsonContent))),
     branch:  cfg.branch,
   };
-  if (sha) body.sha = sha; // required when updating an existing file
+  if (sha) body.sha = sha;
   const res = await fetch(url, {
     method:  'PUT',
     headers: ghHeaders(cfg.token),
@@ -422,14 +422,10 @@ async function ghPutFile(cfg, jsonContent, sha) {
   });
   if (res.status === 401) throw new Error('Token invalid or expired.');
   if (res.status === 403) throw new Error('Fine-grained token missing "Contents: Read and Write" permission.');
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({}));
-    throw new Error(err.message || `HTTP ${res.status}`);
-  }
-  return res.json();
+  return res; // let caller handle 409 conflict
 }
 
-// ── Save progress → GitHub ────────────────────────────────────────────────────
+// ── Save progress → GitHub (retries once on SHA conflict) ────────────────────
 async function saveToGitHub() {
   const cfg = loadConfig();
   if (!cfg.token || !cfg.owner || !cfg.repo) { openSettings(); return; }
@@ -437,11 +433,25 @@ async function saveToGitHub() {
   setStatus('Saving…', 'busy');
   setSyncBusy(true);
   try {
-    const existing = await ghGetFile(cfg);
-    const sha      = existing ? existing.sha : undefined;
-    const payload  = JSON.stringify(loadProgress(), null, 2);
-    await ghPutFile(cfg, payload, sha);
-    setStatus(`✓ Saved ${new Date().toLocaleTimeString()}`, 'ok');
+    const payload = JSON.stringify(loadProgress(), null, 2);
+
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      const existing = await ghGetFile(cfg);   // always fetch fresh SHA
+      const sha      = existing ? existing.sha : undefined;
+      const res      = await ghPutFile(cfg, payload, sha);
+
+      if (res.status === 409) {
+        // SHA mismatch — file changed between our GET and PUT; retry with fresher SHA
+        if (attempt < 3) continue;
+        throw new Error('SHA conflict after 3 attempts — try Refresh first, then Save.');
+      }
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.message || `HTTP ${res.status}`);
+      }
+      setStatus(`✓ Saved ${new Date().toLocaleTimeString()}`, 'ok');
+      return; // success — exit loop
+    }
   } catch (e) {
     setStatus(`✗ ${e.message}`, 'err');
   } finally {
