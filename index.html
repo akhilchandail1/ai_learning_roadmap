@@ -1050,6 +1050,10 @@
       <label>Branch</label>
       <input id="cfg-branch" type="text" placeholder="main">
     </div>
+    <div class="modal-test-row">
+      <button class="modal-btn test" onclick="testConnection()">Test Connection</button>
+      <span id="test-result"></span>
+    </div>
     <div class="modal-actions">
       <button class="modal-btn secondary" onclick="closeSettings()">Cancel</button>
       <button class="modal-btn confirm" onclick="saveSettings()">Save Config</button>

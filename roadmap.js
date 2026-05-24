@@ -300,6 +300,62 @@ function openSettings() {
 
 function closeSettings() {
   document.getElementById('settings-modal').classList.remove('open');
+  document.getElementById('test-result').textContent = '';
+}
+
+// ── Test connection using the token currently typed in the modal ──────────────
+async function testConnection() {
+  const token = document.getElementById('cfg-token').value.trim();
+  const owner = document.getElementById('cfg-owner').value.trim();
+  const repo  = document.getElementById('cfg-repo').value.trim();
+  const out   = document.getElementById('test-result');
+
+  if (!token) { out.textContent = '✗ Enter a token first'; out.className = 'test-err'; return; }
+
+  out.textContent = 'Testing…'; out.className = 'test-busy';
+
+  // Step 1: validate the token itself via /user
+  try {
+    const uRes = await fetch('https://api.github.com/user', {
+      headers: ghHeaders(token),
+    });
+    if (uRes.status === 401) {
+      out.textContent = '✗ Token rejected (401) — it may be expired or invalid. Create a new one.';
+      out.className = 'test-err'; return;
+    }
+    if (!uRes.ok) {
+      out.textContent = `✗ Token error: HTTP ${uRes.status}`;
+      out.className = 'test-err'; return;
+    }
+    const user = await uRes.json();
+
+    // Step 2: validate repo access (only if owner+repo filled in)
+    if (owner && repo) {
+      const rRes = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
+        headers: ghHeaders(token),
+      });
+      if (rRes.status === 404) {
+        out.textContent = `✓ Token OK (${user.login}) but repo "${owner}/${repo}" not found — check spelling or create it.`;
+        out.className = 'test-warn'; return;
+      }
+      if (rRes.status === 403) {
+        out.textContent = `✓ Token OK (${user.login}) but no access to "${owner}/${repo}" — token needs "repo" scope.`;
+        out.className = 'test-warn'; return;
+      }
+      if (!rRes.ok) {
+        out.textContent = `✓ Token OK but repo check failed: HTTP ${rRes.status}`;
+        out.className = 'test-warn'; return;
+      }
+      out.textContent = `✓ Token OK · repo "${owner}/${repo}" accessible`;
+      out.className = 'test-ok';
+    } else {
+      out.textContent = `✓ Token OK — authenticated as ${user.login}`;
+      out.className = 'test-ok';
+    }
+  } catch (e) {
+    out.textContent = `✗ Network error: ${e.message}`;
+    out.className = 'test-err';
+  }
 }
 
 function saveSettings() {
@@ -341,11 +397,13 @@ async function ghGetFile(cfg) {
   const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${cfg.path}?ref=${cfg.branch}`;
   const res = await fetch(url, { headers: ghHeaders(cfg.token) });
   if (res.status === 404) return null;
+  if (res.status === 401) throw new Error('Token invalid or expired — open ⚙ Config → Test Connection to diagnose.');
+  if (res.status === 403) throw new Error('Token lacks "repo" scope — regenerate your PAT with repo access.');
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
     throw new Error(err.message || `HTTP ${res.status}`);
   }
-  return res.json(); // { content (base64), sha, ... }
+  return res.json();
 }
 
 // PUT (create or update) a file — sha is required to update an existing file
