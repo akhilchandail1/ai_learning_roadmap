@@ -1,0 +1,34 @@
+{
+  "1": {
+    "done": false,
+    "topics": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "impl": false,
+    "resources": [],
+    "linkedin": false,
+    "github": false
+  },
+  "2": {
+    "done": false,
+    "topics": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "impl": true,
+    "resources": [
+      true,
+      true
+    ],
+    "linkedin": false,
+    "github": false
+  },
+  "_lastUpdated": "2026-05-24T19:56:19.657Z"
+}
